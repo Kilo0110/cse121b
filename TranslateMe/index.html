@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <link
+    rel="stylesheet"
+    href="./styles/main.css"
+  >
+  <title>TranslateMe || Index Page</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="main-nav">
+      <span>TranslateMe</span>
+    </nav>
+  </header>
+  <main class="main-content">
+    <h1 class="intro-text">
+      Unleash Your Canine Curiosity: Dive into the Pawsome World of Dog
+      Facts!
+    </h1>
+    <p class="supporting-statement">Discover fascinating insights, quirks, and trivia about man's best friend. Join us
+      on a tail-wagging adventure of
+      knowledge and deepen your love for dogs. Powered by <a href="https://kinduff.github.io/dog-api/">DogAPI</a> and
+      built by <a href="https://kamcyahaka.netlify.app/">KamCy Ahaka</a></p>
+    <button class="get-fact-button">Get Fact</button>
+    <div class="output-container hide">
+      <textarea
+        name="output-text"
+        id="output-text"
+        cols="30"
+        rows="10"
+        disabled
+      ></textarea>
+      <button class="save-button">Save Fact</button>
+    </div>
+  </main>
+
+  <script
+    type="module"
+    src="./scripts/index.js"
+  ></script>
+</body>
+
+</html>
