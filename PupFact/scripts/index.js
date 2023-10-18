@@ -8,6 +8,7 @@ const outputText = document.querySelector('#output-text');
 const getFactBtn = document.querySelector('.get-fact-button');
 const saveFactBtn = document.querySelector('.save-button');
 const showFactBtn = document.querySelector('.show-fact-button');
+const hideFactBtn = document.querySelector('.hide-fact-button');
 
 let fact;
 
@@ -18,23 +19,18 @@ getFactBtn.addEventListener('click', async () => {
 });
 
 saveFactBtn.addEventListener('click', () => {
-  saveFact(fact.facts[0]);
+  saveFact(fact.facts[0], factsListContainer);
 });
 
 showFactBtn.addEventListener('click', () => {
   factsListContainer.classList.remove('hide');
-  let savedFacts = showFacts();
+  showFactBtn.classList.add('hide');
+  hideFactBtn.classList.remove('hide');
+  showFacts(factsListContainer);
+});
 
-  if (savedFacts === null) {
-    factsListContainer.textContent = `No fact to show`;
-  } else {
-    const factsToShow = savedFacts.facts;
-    factsListContainer.innerHTML = '';
-
-    factsToShow.forEach((fact) => {
-      const factLiElement = document.createElement('li');
-      factLiElement.textContent = fact;
-      factsListContainer.appendChild(factLiElement);
-    });
-  }
+hideFactBtn.addEventListener('click', () => {
+  factsListContainer.classList.add('hide');
+  showFactBtn.classList.remove('hide');
+  hideFactBtn.classList.add('hide');
 });
