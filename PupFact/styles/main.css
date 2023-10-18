@@ -50,7 +50,6 @@ body {
   max-width: 500px;
 }
 
-.input-container,
 .output-container {
   display: flex;
   flex-direction: column;
@@ -60,7 +59,6 @@ body {
   max-width: 300px;
 }
 
-.input-container textarea,
 .output-container textarea {
   padding: 1em;
   border: 2px solid hsl(287, 56%, 83%);
@@ -80,17 +78,27 @@ body {
   font-weight: bold;
   width: 100%;
   max-width: 200px;
+  transition: all 0.3s ease;
 }
 
-.hide {
-  display: none;
+.save-button {
+  margin: 0 auto;
+}
+
+.button:hover {
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(0.9);
 }
 
 .facts-list-container {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  max-width: 300px;
+  max-width: 350px;
+  margin: 0 1em;
 }
 
 .facts-list-container li {
@@ -98,4 +106,17 @@ body {
   text-align: left;
   border-bottom: 1px dotted black;
   padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.facts-list-container li .saved-time {
+  font-weight: bold;
+  text-align: right;
+  font-size: clamp(8px, calc(0.65rem + 1vw), 14px);
+}
+
+.hide {
+  display: none;
 }
